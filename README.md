@@ -1,4 +1,7 @@
 # gulp-webpack-example
+---
+
+Пример сборки проекта с использованием связки Gulp(styles) + Webpack(scripts)
 
 [Гайд по установке и настройке NodeJS + npm в Ubuntu](https://www.digitalocean.com/community/tutorials/node-js-ubuntu-18-04-ru)
 
@@ -6,11 +9,11 @@
 
 Инициализация:
 
-npm i
+_npm i_
 
 Список доступных тасков:
 
-gulp --tasks
+_gulp --tasks_
 
 Есть на данный момент:
 
