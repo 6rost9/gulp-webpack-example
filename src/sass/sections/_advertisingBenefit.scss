@@ -1,0 +1,108 @@
+.advertisingBenefit {
+	// @include sectionPaddingTop();
+
+	.wrapper {
+		> h2 {
+			@include h2MarginBottom();
+		}
+
+		.blocks {
+			.block {
+				max-width: 260px;
+
+				@media (max-width: 1000px) {
+					width: calc(50% - 40px);
+					max-width: 440px;
+				}
+
+				@media (max-width: 767px) {
+					width: calc(50% - 30px);
+				}
+
+				@media (max-width: 600px) {
+					width: calc(100% - 30px);
+					&:not(.active) {
+						display: none;
+					}
+				}
+
+				.wrap {
+					position: relative;
+
+					.image {
+						display: flex;
+						align-items: flex-start;
+						margin-bottom: 20px;
+						width: 200px;
+
+						@media (max-width: 1200px) {
+					    margin: 0 auto 20px auto;
+						}
+
+						@media (max-width: 600px) {
+							position: absolute;
+							width: 40px;
+							height: 40px;
+							left: 0;
+							top: 0;
+						}
+
+						img {
+							max-width: 100%;
+							width: 100%;
+						}
+					}
+
+					.heading {
+						font-family: MullerBold;
+					}
+
+					.text,
+					.heading {
+						@media (max-width: 600px) {
+							padding-left: 56px;
+						}
+					}
+				}
+			}
+		}
+
+		.pagination {
+			height: 45px;
+			width: 100%;
+	    margin-bottom: 10px;
+
+			@media (min-width: 601px) {
+				display: none;
+			}
+
+			.wrap {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 3px;
+
+				img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+
+			.scrollbar {
+				width: 100%;
+				height: 2px;
+				position: relative;
+				background-color: $clrDarkGray;
+
+				span {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 40px;
+					height: 2px;
+					background-color: $clrOldBlue;
+					transition: left .2s ease;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,210 @@
+@mixin pseudoAbsoluteFullWidth($content) {
+	position: absolute;
+	content: $content;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+@mixin absoluteFullWidth() {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+@mixin pseudoAbsoluteFullWidthBtn($content) {
+	$calc: calc(100% + 2px);
+	position: absolute;
+	content: $content;
+	left: -1px;
+	top: -1px;
+	bottom: -1px;
+	right: -1px;
+}
+@mixin btnBorderImage($url) {
+	border: solid 1px rgba(255, 255, 255, 0.01);
+	border-image-slice: 18 18 18 18;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0;
+    border-image-repeat: stretch stretch;
+    border-image-source: $url;
+}
+
+@mixin h1() {
+  font-family: MullerBold;
+	font-size: 90px;
+	line-height: 90px;
+}
+
+@mixin h1_1000 () {
+	font-size: 80px;
+	line-height: 80px;
+}
+
+@mixin h1_768 () {
+	font-size: 70px;
+	line-height: 70px;
+}
+
+@mixin h1_320() {
+	font-size: 34px;
+	line-height: 40px;
+}
+
+@mixin h2Caps() {
+	font-family: MullerBold;
+	font-size: 50px;
+	line-height: 60px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+@mixin h2Caps_768() {
+	font-size: 50px;
+	line-height: 60px;
+}
+
+@mixin h2Caps_320() {
+	font-size: 34px;
+	line-height: 41px;
+	letter-spacing: 0.05em;
+}
+
+@mixin h2() {
+	font-size: 50px;
+	line-height: 60px;
+}
+
+@mixin h3() {
+	font-family: MullerBold;
+	font-size: 40px;
+	line-height: 48px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+@mixin h4() {
+	font-family: MullerBold;
+	font-size: 34px;
+	line-height: 40px;
+	margin: 0 0 10px 0;
+}
+
+@mixin h4_320() {
+	font-size: 24px;
+	line-height: 28px;
+}
+
+@mixin h3_320() {
+	font-size: 30px;
+	line-height: 32px;
+}
+
+@mixin h5() {
+	font-family: MullerBold;
+	font-size: 30px;
+	line-height: 32px;
+}
+
+@mixin smallText() {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+@mixin paragraphText_1920() {
+	font-size: 20px;
+	line-height: 28px;
+}
+
+@mixin paragraphText_1000() {
+	font-size: 20px;
+	line-height: 28px;
+}
+
+@mixin paragraphText_320() {
+	font-size: 18px;
+	line-height: 26px;
+}
+
+@mixin sectionPaddingTopLarge() {
+	padding-top: 80px;
+
+	@media (max-width: 1200px) {
+		padding-top: 70px;
+	}
+
+	@media (max-width: 900px) {
+		padding-top: 40px;
+	}
+
+	@media (max-width: 600px) {
+		padding-top: 50px;
+	}
+}
+
+@mixin sectionPaddingTopMedium() {
+	padding-top: 70px;
+
+	@media (max-width: 1200px) {
+		padding-top: 50px;
+	}
+
+	@media (max-width: 900px) {
+		padding-top: 40px;
+	}
+
+	@media (max-width: 600px) {
+		padding-top: 50px;
+	}
+}
+
+@mixin sectionPaddingTopSmall() {
+	padding-top: 60px;
+
+	@media (max-width: 1200px) {
+		padding-top: 40px;
+	}
+
+	@media (max-width: 900px) {
+		padding-top: 30px;
+	}
+
+	@media (max-width: 600px) {
+		padding-top: 20px;
+	}
+}
+
+@mixin h2MarginBottom() {
+	margin-bottom: 30px;
+
+	@media (max-width: 900px) {
+		margin-bottom: 15px;
+	}
+}
+
+@mixin marginTopLarge {
+	margin-top: 70px;
+}
+
+@mixin marginTopMiddel {
+	margin-top: 40px;
+}
+
+@mixin marginTopSmall {
+	margin-top: 30px;
+
+	// @media (max-width: 1200px) {
+	// 	margin-top: 30px;
+	// }
+
+	@media (max-width: 900px) {
+		margin-top: 20px;
+	}
+
+	// @media (max-width: 900px) {
+	// 	margin-top: 20px;
+	// }
+}

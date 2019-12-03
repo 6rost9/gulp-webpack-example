@@ -1,0 +1,17 @@
+.adPreparation {
+	.wrapper {
+		ol {
+			margin: 0 0 12px;
+			column-count: 2;
+			column-gap: 115px;
+
+      @media (max-width: 600px) {
+        column-count: 1;
+      }
+
+			li {
+				margin: 0 0 12px;
+			}
+		}
+	}
+}

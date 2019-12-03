@@ -1,0 +1,23 @@
+.video_background {
+	@include absoluteFullWidth();
+	overflow: hidden;
+	z-index: 10;
+
+  &__dark:before {
+    @include absoluteFullWidth();
+		content: '';
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 15;
+  }
+
+	video {
+		width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	}
+}

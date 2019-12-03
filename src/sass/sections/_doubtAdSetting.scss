@@ -1,0 +1,183 @@
+.doubtAdSetting {
+	padding-top: 150px;
+	background-color: $clrSectionLightGray;
+  overflow: hidden;
+
+	.wrapper {
+		> h2 {
+			margin-bottom: 33px;
+
+			@media (max-width: 600px) {
+				hyphens: auto;
+				word-wrap: break-word;
+			}
+		}
+
+    .blocks.two {
+      .block {
+        @media (max-width: 600px) {
+          width: calc(100% - 30px);
+        }
+      }
+    }
+
+		.requestForm {
+			position: relative;
+			border: 10px solid $clrYellow;
+			box-sizing: border-box;
+      padding: 34px 60px 20px 60px;
+	    margin-top: 40px;
+	    margin-bottom: 60px;
+			background-color: $clrWhite;
+			box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+
+      @media (max-width: 900px) {
+        padding: 34px 50px 20px 40px;
+        margin-top: 38px;
+      }
+
+      @media (max-width: 600px) {
+        padding: 25px 15px 0px 15px;
+        margin-top: 18px;
+      }
+
+			.content {
+				.blocks {
+          @media (min-width: 901px) and (max-width: 1200px) {
+            position: relative;
+            margin-bottom: 90px;
+          }
+					.block {
+            &:first-of-type {
+              @media (max-width: 900px) {
+                width: 100%;
+                margin-bottom: 12px;
+              }
+
+              p:first-of-type {
+                margin-top: 0;
+              }
+            }
+
+						&:last-of-type {
+              @media (max-width: 900px) {
+                width: 100%;
+                max-width: 480px;
+                margin: 0 auto;
+              }
+
+              @media (max-width: 767px) {
+                width: calc(100% - 30px);
+              }
+
+							form {
+								> .elementWrap {
+							    margin-right: 70px;
+
+                  @media (max-width: 900px) {
+                    margin-right: 0;
+                  }
+								}
+
+                > .elementsRow.submit {
+                  @media (min-width: 901px) and (max-width: 1200px) {
+                    position: absolute;
+                    left: 20px;
+                    right: 0px;
+                    top: calc(100% + 10px);
+                  }
+                }
+							}
+						}
+					}
+				}
+			}
+
+			.overlay {
+				@include absoluteFullWidth();
+				background: $clrWhite;
+				z-index: 10;
+
+				.circle {
+					svg {
+						stroke: $clrYellow;
+					}
+				}
+			}
+
+			.responce {
+				@include absoluteFullWidth();
+				background: $clrWhite;
+				z-index: 10;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.wrap {
+					max-width: 700px;
+
+					.heading {
+						@include h4();
+					}
+
+					.message {
+						margin-top: 13px;
+						margin-bottom: 5px;
+					}
+
+					.link.blue {
+						position: relative;
+				    margin-left: 32px;
+
+						&:before {
+							position: absolute;
+							content: '';
+							width: 23px;
+							height: 20px;
+							background-image: url('/images/reload.svg');
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: cover;
+							top: 2px;
+							left: -32px;
+						}
+					}
+				}
+			}
+
+			.plane {
+				position: absolute;
+				right: -64px;
+		    top: -48px;
+				transform: rotate(-40deg);
+				width: 165px;
+				height: 135px;
+		    filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.1));
+				z-index: 20;
+
+        @media (max-width: 1200px) {
+          right: -34px;
+          top: -29px;
+          width: 99px;
+          height: 81px;
+        }
+
+        @media (max-width: 600px) {
+          display: none;
+        }
+
+				span {
+					display: block;
+					width: 100%;
+					height: 100%;
+					background: url('/images/plane_2.svg'), url('/images/noiseTexture.png');
+					background-repeat: no-repeat, repeat;
+			    background-blend-mode: screen;
+			    background-size: cover, 25px;
+					mask: url('/images/plane_2.svg');
+					mask-size: contain;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,152 @@
+.certifiedAgency {
+  @media (max-width: 1200px) {
+    padding-top: 30px;
+  }
+
+  @media (max-width: 1200px) {
+    padding-top: 20px;
+  }
+
+  .wrapper {
+    position: relative;
+
+    .blocks {
+      // align-items: center;
+
+      @media (max-width: 1439px) {
+        flex-direction: column;
+      }
+
+      > h3 {
+        @media (min-width: 1440px) {
+          position: absolute;
+          left: 20px;
+          top: 0;
+          max-width: 560px;
+        }
+
+        @media (max-width: 1439px) {
+          order: 0;
+          // align-self: flex-start;
+          margin: 0 20px;
+        }
+      }
+
+      .block {
+        @media (max-width: 1439px) {
+          width: calc(100% - 40px);
+          max-width: unset;
+        }
+
+        @media (max-width: 767px) {
+          width: calc(100% - 30px);
+        }
+
+        &:first-of-type {
+          @media (max-width: 1439px) {
+            order: 2;
+          }
+
+          .text {
+            @media (min-width: 1440px) {
+              margin-top: 106px;
+            }
+          }
+
+          .channels {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+
+            @media (max-width: 767px) {
+              overflow-x: scroll;
+            }
+
+            span {
+              margin-right: 15px;
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+
+            .ya {
+              margin-bottom: 4px;
+
+              img {
+                width: 130px;
+              }
+            }
+
+            .g {
+              img {
+                width: 156px;
+              }
+            }
+
+            .fb {
+              img {
+                width: 30px;
+              }
+            }
+
+            .inst {
+              img {
+                width: 30px;
+              }
+            }
+
+            .vk {
+              img {
+                width: 30px;
+              }
+            }
+
+            .my {
+              img {
+                width: 64px;
+              }
+            }
+          }
+        }
+
+        &:last-of-type {
+          @media (max-width: 1439px) {
+            order: 1;
+          }
+
+          @media (max-width: 1200px) {
+            margin-top: 18px;
+          }
+
+          @media (max-width: 635px) {
+            overflow-x: scroll;
+          }
+
+          .wrap {
+            display: flex;
+            justify-content: space-around;
+
+            @media (max-width: 1439px) {
+              justify-content: center;
+            }
+
+            @media (max-width: 635px) {
+              justify-content: flex-start;
+            }
+
+            img {
+              max-width: 264px;
+
+              &:first-child {
+                @media (max-width: 1439px) {
+                  margin-right: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

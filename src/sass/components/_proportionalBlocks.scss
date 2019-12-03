@@ -1,0 +1,30 @@
+.proprtional {
+  position: relative;
+
+  &:before {
+    content: '';
+    margin-top: 50%;
+    width: 100%;
+  }
+
+  &_56-25:before {
+    margin-top: 56.25%;
+  }
+
+  &_65-38:before {
+    margin-top: 65.38%;
+  }
+
+  &_100:before {
+    margin-top: 100%;
+  }
+
+  &_46-15:before {
+    margin-top: 46.15%;
+  }
+
+  &_content {
+    @include pseudoAbsoluteFullWidth('');
+
+  }
+}

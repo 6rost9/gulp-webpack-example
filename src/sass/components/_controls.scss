@@ -1,0 +1,513 @@
+.btn {
+  display: inline-block;
+  -webkit-appearance: none;
+  outline: none;
+  position: relative;
+  border: none;
+  font-size: 18px;
+  line-height: 50px;
+  font-family: MullerBold;
+  height: 50px;
+  // min-height: 50px;
+  min-width: 220px;
+  padding: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  color: $clrText;
+
+  &.yellow {
+    background: $lgYelow;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: $btnShadow;
+    }
+
+    &:before {
+      @include pseudoAbsoluteFullWidth('');
+      background: $lgYelowLigth;
+      z-index: -1;
+      transition: 0.2s ease;
+      opacity: 0;
+    }
+
+    &:active {
+      box-shadow: $btnShadowLight;
+      background: $lgYelowDark !important;
+    }
+
+    &:hover:before {
+      cursor: pointer;
+      opacity: 1;
+      z-index: 1;
+      transition: 0s ease;
+    }
+
+    &:hover:active:before {
+      opacity: 0;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      background: $clrBtnDisabled;
+
+      > span {
+        color: $clrDisabled;
+      }
+    }
+
+    span {
+      color: $clrText;
+    }
+  }
+
+  &.blue {
+    background: $lgBlue;
+    border-radius: 5px;
+    overflow: hidden;
+
+    > span {
+      color: $clrWhite;
+    }
+
+    &:hover {
+      box-shadow: $btnShadow;
+    }
+
+    &:before {
+      @include pseudoAbsoluteFullWidth('');
+      background: $lgBlueLigth;
+      z-index: -1;
+      transition: 0.2s ease;
+      opacity: 0;
+    }
+
+    &:active {
+      box-shadow: $btnShadowLight;
+      background: $lgBlueDark !important;
+    }
+
+    &:hover:before {
+      cursor: pointer;
+      opacity: 1;
+      z-index: 1;
+      transition: 0s ease;
+    }
+
+    &:hover:active:before {
+      opacity: 0;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      background: $clrBtnDisabled;
+
+      > span {
+        color: $clrDisabled;
+      }
+    }
+  }
+
+  &.borderYellow {
+    @include btnBorderImage(url("/images/borderYellow.svg"));
+    background-color: transparent;
+    border-radius: 5px;
+    min-width: unset;
+    padding: 0 20px;
+
+    > span {
+      color: $clrWhite;
+
+      &:after {
+        content: url("/images/arrowBtn.svg");
+        vertical-align: middle;
+        margin-left: 8px;
+      }
+    }
+
+    &:before {
+      @include pseudoAbsoluteFullWidthBtn('');
+      @include btnBorderImage(url("/images/borderYellowLight.svg"));
+      opacity: 0;
+      box-sizing: border-box;
+      transition: 0.2s ease;
+    }
+
+    &:active:before {
+      border-image-source: url("/images/borderYellowDark.svg");
+    }
+
+    &:hover:before {
+      opacity: 1;
+      transition: 0s ease;
+    }
+  }
+
+  &.borderBlue {
+    @include btnBorderImage(url("/images/borderBlue.svg"));
+    background-color: transparent;
+    border-radius: 5px;
+    min-width: unset;
+    padding: 0 20px;
+
+    > span {
+      color: $clrWhite;
+    }
+
+    &:before {
+      @include pseudoAbsoluteFullWidthBtn('');
+      @include btnBorderImage(url("/images/borderBlueLight.svg"));
+      opacity: 0;
+      box-sizing: border-box;
+      transition: 0.2s ease;
+    }
+
+    &:active:before {
+      border-image-source: url("/images/borderBlueDark.svg");
+    }
+
+    &:hover:before {
+      opacity: 1;
+      transition: 0s ease;
+    }
+  }
+
+  & span {
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+
+  &:active {
+    top: 1px;
+  }
+
+  &:hover:before {}
+}
+
+.link {
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-color: $clrBlueBorder;
+  border-bottom-style: solid;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  &.pseudo {
+    border-bottom-style: dashed;
+  }
+
+  &.pseudo.blue.active {
+    font-family: MullerBold;
+    color: $clrText;
+    cursor: default;
+    border-bottom-color: transparent;
+    pointer-events: none;
+  }
+
+  &.blue {
+    color: $clrOldBlue;
+  }
+
+  &.gray {
+    color: $clrFooterGrey;
+    border-bottom-color: $clrFooterGreyBorder;
+  }
+
+  &.green {
+    color: #00E476;
+    border-bottom-color: #00E476;
+  }
+
+  &.yellow {
+    color: #FFDD67;
+    border-bottom-color: #FFDD67;
+  }
+
+  &.white {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  &.source_code {
+    font-family: 'Courier New';
+    position: relative;
+    margin: 0 0.74rem;
+    color: #70C8FF;
+    border-bottom-color: #70C8FF;
+    white-space: nowrap;
+  }
+
+  &.source_code:before,
+  &.source_code:after {
+    font-family: inherit;
+    position: absolute;
+    top: -3px;
+  }
+
+  &.source_code:before {
+    content: '<';
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  &.source_code:after {
+    content: '>';
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &.disabled {
+    pointer-events: none;
+    color: $clrDisabledLink;
+    border-bottom-color: $clrDisabledLink;
+  }
+
+  &.blue:hover,
+  &.gray:hover {
+    color: $clrHoverLink;
+    border-bottom-color: $clrHoverLink;
+    transition: 0s ease;
+  }
+
+  &.blue:visited {
+    color: $clrVisitedLink;
+    border-bottom-color: $clrVisitedLink;
+  }
+
+  &.blue:active,
+  &.gray:active {
+    transition: 0.2s ease;
+    color: $clrActiveLink;
+    border-bottom-color: $clrActiveLink;
+  }
+
+  &:active {
+    top: 1px;
+  }
+}
+
+.dropDownArrow {
+  $this: &;
+  width: 10px;
+  height: 5px;
+  position: relative;
+  cursor: pointer;
+
+  span {
+    height: 1px;
+    width: 6px;
+    position: absolute;
+    background-color: #000;
+    transition: 0.2s;
+
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+      transform: rotate(45deg);
+      left: 0;
+    }
+
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+      transform: rotate(-45deg);
+      right: 0;
+    }
+  }
+
+  &.active {
+    span {
+      &:first-child {
+        transform: rotate(-45deg);
+      }
+
+      &:last-child {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.cornersLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:after,
+  &:before {
+    position: absolute;
+    content: '';
+    width: 86px;
+    height: 86px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+  }
+
+  &:before {
+    border-left: 5px solid;
+    border-top: 5px solid;
+    border-color: $clrOldBlue;
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+    border-color: $clrOldBlue;
+    right: 0;
+    bottom: 0;
+  }
+
+  span {
+    color: $clrText;
+
+    &:before {
+      position: absolute;
+      content: '';
+    }
+  }
+
+  svg {
+    fill: $clrText;
+    margin-left: 24px;
+    transition: fill 0.2s ease;
+  }
+
+  &:hover {
+    svg {
+      transition: fill 0s ease;
+      fill: $clrHoverLink;
+    }
+
+    &:after,
+    &:before {
+      transition: border-color 0s ease;
+      border-color: $clrHoverLink;
+    }
+  }
+
+  &:active {
+    &:before {
+      top: 1px;
+      left: 1px;
+    }
+
+    &:after {
+      right: 1px;
+      bottom: 1px;
+    }
+  }
+
+  &.case {
+    width: 289px;
+    height: 121px;
+
+    span {
+      width: 145px;
+    }
+
+    @media (max-width: 1000px) {
+      width: 300px;
+      height: 100px;
+
+      @include paragraphText_1000();
+
+      &:before {
+        border-left-width: 9px;
+        border-top-width: 9px;
+      }
+
+      &:after {
+        border-right-width: 9px;
+        border-bottom-width: 9px;
+      }
+
+      svg {
+        margin-left: 0;
+      }
+
+      span {
+        width: 158px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 290px;
+      height: 92px;
+      @include paragraphText_320();
+
+      &:after,
+      &:before{
+        width: 81px;
+        height: 81px;
+      }
+
+      &:before {
+        border-left-width: 7px;
+        border-top-width: 7px;
+      }
+
+      &:after {
+        border-right-width: 7px;
+        border-bottom-width: 7px;
+      }
+
+      svg {
+        width: 56px;
+      }
+    }
+
+  }
+}
+
+.swiper-contol {
+  cursor: pointer;
+  outline: none;
+
+  svg {
+    position: relative;
+    fill: $clrFooterGrey;
+    transition: fill 0.2s ease;
+
+    &:hover {
+      transition: fill 0s ease;
+      fill: $clrHoverLink;
+    }
+
+    &:active {
+      top: 1px;
+    }
+  }
+
+
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  &_next {
+    transform: scaleX(-1);
+  }
+
+  &_disabled {
+    pointer-events: none;
+    cursor: default;
+
+    svg {
+      fill: $clrDarkGray !important;
+    }
+  }
+}
+
+.swiper-page-counter {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: MullerBold;
+  margin: 0 20px;
+}

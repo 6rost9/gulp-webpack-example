@@ -1,0 +1,60 @@
+.cases_list {
+	margin-top: -50px;
+
+	@media (max-width: 600px) {
+		margin-top: -20px;
+	}
+
+	&.blocks.two .block {
+		@media (max-width: 600px) {
+			margin-top: 20px;
+			width: calc(100% - 30px);
+		}
+	}
+
+	&_item {
+		margin-top: 50px;
+
+		&__link {
+			color: $clrText;
+		}
+
+		&__image {
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 20px;
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		&__notice {
+			color: $clrFooterGrey;
+		}
+
+		&.proprtional {
+			display: flex;
+			align-self: start;
+
+			&:before {
+				@media (max-width: 600px) {
+					display: none;
+				}
+			}
+		}
+
+		.proprtional_content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@media (max-width: 600px) {
+				position: static;
+				margin: 0 auto;
+			}
+		}
+	}
+}

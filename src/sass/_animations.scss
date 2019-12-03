@@ -1,0 +1,171 @@
+.slide-in-start {
+  opacity: 0;
+}
+
+.slide-in-play {
+  animation: slide_in 0.25s;
+}
+
+.slide-out-start {
+
+}
+
+.slide-out-play {
+  animation: slide_out 0.25s;
+}
+
+.slide-up-start {
+  opacity: 0;
+}
+
+.slide-up-play {
+  animation: slide_up 0.25s;
+}
+
+.slide-down-start {
+
+}
+
+.slide-down-play {
+  animation: slide_down 0.25s;
+}
+
+.fade-out-start {
+
+}
+
+.fade-out-play {
+  animation: fade_out 0.2s;
+}
+
+.fade-in-start {
+  display: inline-block;
+  opacity: 0;
+}
+
+.fade-in-play {
+  animation: fade_in 0.2s;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  animation: rotate 1.5s infinite linear;
+}
+
+.circle svg {
+  stroke-dasharray: 232.36;
+  stroke-dashoffset: 232.36;
+  animation: stroke 2.5s infinite linear;
+}
+
+@keyframes slide_out {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide_in {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide_down {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide_down_center {
+  0% {
+    transform: translateY(0px) translateX(-50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(-50%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide_up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide_up_center {
+  0% {
+    transform: translateY(100px) translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade_out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes stroke {
+  0% {
+    stroke-dashoffset: 232.36;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(0deg);
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

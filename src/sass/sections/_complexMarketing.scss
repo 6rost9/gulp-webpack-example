@@ -1,0 +1,93 @@
+.marketing_features {
+  &.blocks.three {
+    @media (max-width: 1200px) {
+      box-sizing: border-box;
+      padding-left: 53px;
+
+      .block {
+        width: calc(100% - 40px);
+        max-width: unset;
+      }
+    }
+
+    @media (max-width: 475px) {
+      padding-left: 30px;
+    }
+  }
+
+  &_item {
+    $pr: &;
+    max-width: 365px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 25px;
+    }
+
+    &._context {
+      #{$pr}__heading:before {
+        background-image: url('/images/complexMarketing/context_icon.svg');
+        top: -4px;
+        width: 45px;
+        height: 45px;
+
+        @media (max-width: 475px) {
+          top: 1px;
+          width: 30px;
+          height: 31px;
+        }
+      }
+    }
+
+    &._promotion {
+      #{$pr}__heading:before {
+        background-image: url('/images/complexMarketing/upper_icon.svg');
+        top: 0px;
+        width: 24px;
+        height: 27px;
+
+        @media (max-width: 475px) {
+          top: 4px;
+          width: 19px;
+          height: 21px;
+        }
+      }
+    }
+
+    &._dev {
+      #{$pr}__heading:before {
+        background-image: url('/images/complexMarketing/dev_icon.svg');
+        top: 2px;
+        width: 28px;
+        height: 28px;
+
+        @media (max-width: 475px) {
+          top: 4px;
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+
+  &_item__heading {
+    position: relative;
+    font-family: MullerBold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    display: inline-block;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      left: -6px;
+      transform: translateX(-100%);
+
+      // @media (max-width: 475px) {
+      //   left: -2px;
+      // }
+    }
+  }
+}

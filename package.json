@@ -1,0 +1,38 @@
+{
+  "name": "liderpoiska.ru",
+  "version": "1.0.0",
+  "description": "lp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^2.1.1",
+    "dragscroll": "0.0.8",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-bulk-import": "^1.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "hammerjs": "^2.0.8",
+    "inputmask": "^4.0.9",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^7.3.1",
+    "swiper": "^4.5.1",
+    "webpack": "^4.41.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "gulp-if": "^3.0.0"
+  }
+}

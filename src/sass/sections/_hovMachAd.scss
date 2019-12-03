@@ -1,0 +1,20 @@
+.hovMachAd {
+	background-color: $clrSectionLightGray;
+  display: flex;
+
+	.wrapper {
+		> h2 {
+			margin-bottom: 30px;
+
+			@media (max-width: 1200px) {
+				width: 100%;
+			}
+
+      @media (max-width: 900px) {
+        & {
+          margin-bottom: 15px;
+        }
+      }
+		}
+	}
+}

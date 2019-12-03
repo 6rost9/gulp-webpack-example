@@ -1,0 +1,15 @@
+.adBudget {
+	background-color: $clrSectionLightGray;
+
+		.collapseWrap {
+			.blocks.two {
+				.block {
+					@media (max-width: 600px) {
+						& {
+					    width: calc(100% - 30px);
+						}
+					}
+				}
+			}
+		}
+}

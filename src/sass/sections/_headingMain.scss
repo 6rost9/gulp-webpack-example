@@ -1,0 +1,58 @@
+.heading.main_page {
+  background-image: url('/images/main_page_heading.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 660px;
+  position: relative;
+
+  @media (max-width: 1000px) {
+    height: auto;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 20;
+  }
+
+  h1 {
+    text-align: center;
+    background: radial-gradient(ellipse at left bottom, #FEFFBD 0%,rgba(255,168,0,1) 70%);
+    margin: 32px 0 30px 0;
+
+    @media (min-width: 1511px) {
+      margin: 125px 0 30px 0;
+    }
+
+    @media (max-width: 1000px) {
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 600px) {
+      text-align: left;
+    }
+  }
+
+  .text{
+    margin: 0 auto;
+    max-width: 860px;
+    text-align: center;
+
+    @media (max-width: 1510px) {
+      margin-bottom: 37px;
+    }
+
+    @media (max-width: 600px) {
+      text-align: left;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 36px;
+
+      @media (max-width: 1000px) {
+        font-size: 21px;
+        line-height: 36px;
+      }
+    }
+  }
+}

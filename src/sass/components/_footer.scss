@@ -1,0 +1,377 @@
+footer {
+	position: relative;
+	padding: 150px 0 34px;
+	color: $clrFooterGrey;
+	font-size: 18px;
+	line-height: 28px;
+	overflow: hidden;
+
+	.bgWrap {
+		@include absoluteFullWidth();
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			width: 2092px;
+			height: 746px;
+			transform: rotate(3deg);
+			top: -27%;
+			left: -19%;
+
+			@media (max-width: 1000px) {
+				top: -25%;
+				left: -59%;
+			}
+		}
+	}
+
+	.wrapper {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+
+		@media (max-width: 1240px) {
+			align-items: baseline;
+		}
+
+		@media (max-width: 600px) {
+			flex-direction: column;
+		}
+
+		.copy {
+			@media (max-width: 1240px) {
+				order: 0;
+			}
+
+			@media (max-width: 600px) {
+				margin-bottom: 14px;
+			}
+
+			span > br {
+
+				display: none;
+
+				@media (min-width: 601px) and (max-width: 960px) {
+					display: block;
+				}
+			}
+		}
+
+		.footer {
+			@media (min-width: 1241px) {
+				position: absolute;
+    		top: 38px;
+			}
+
+			@media (max-width: 1240px) {
+				order: 4;
+				margin-top: 20px;
+			}
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+
+			ul {
+				display: flex;
+
+				@media (max-width: 1400px) {
+					font-size: 16px;
+					line-height: 16px;
+				}
+
+				li {
+					margin-right: 15px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		.phones {
+			display: flex;
+			flex-direction: column;
+			margin: 0 25px 0 auto;
+
+			@media (max-width: 1240px) {
+				order: 1;
+				flex-direction: row;
+			}
+
+			@media (max-width: 960px) {
+				flex-direction: column;
+			}
+
+			@media (max-width: 600px) {
+				margin-left: 0;
+			}
+
+			.phone {
+				@media (max-width: 960px) {
+					line-height: 24px;
+				}
+				&:first-child {
+					margin-bottom: 8px;
+
+					@media (max-width: 1240px) {
+						margin-bottom: 0;
+						margin-right: 17px;
+					}
+
+					@media (max-width: 960px) {
+						margin-right: 0px;
+					}
+				}
+
+				a {
+					color: $clrFooterGrey;
+				}
+			}
+		}
+
+		.socialWrap {
+			@media (max-width: 1240px) {
+				order: 3;
+				display: flex;
+				align-items: baseline;
+			}
+
+			@media (min-width: 601px) and (max-width: 960px) {
+				flex-direction: column;
+			}
+
+			// @media (max-width: 600px) {
+			// 	flex-direction: row;
+			// }
+
+			> a {
+				@media (max-width: 1240px) {
+					line-height: 18px;
+					margin-right: 35px;
+				}
+			}
+
+			.social {
+				margin-top: 5px;
+
+				a {
+					margin: 0 3px 0 0;
+
+					&:last-child {
+						margin: 0;
+					}
+				}
+
+				svg {
+					fill: $clrFooterGrey;
+					transition: 0.2s ease;
+					position: relative;
+
+					&:hover {
+						fill: $clrHoverLink;
+						transition: 0s ease;
+					}
+
+					&:active {
+						top: 1px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1921px) {
+	footer {
+		.bgWrap {
+			img {
+				width: 125%;
+				height: unset;
+			}
+		}
+	}
+}
+// @media (min-width: 961px) {
+// 	footer {
+// 		.wrapper {
+// 			.copy {
+// 				span {
+// 					br {
+// 						display: none;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+// @media (max-width: 1400px) {
+// 	footer {
+// 		padding: 25px 0 34px;
+//
+// 		.wrapper {
+// 			align-items: flex-end;
+// 			justify-content: space-between;
+//
+// 			.copy {
+// 				order: 0;
+// 			}
+//
+// 			.footer {
+// 				order: 3;
+// 				width: 100%;
+// 				padding: 25px 0 0;
+//
+// 				ul {
+// 					li {
+// 						margin-right: 28px;
+// 					}
+// 				}
+// 			}
+//
+// 			.phones {
+// 				order: 1;
+// 				display: flex;
+// 				flex-direction: row;
+// 				margin: 0;
+//
+// 				.phone {
+// 					&:first-child {
+// 						margin: 0 18px 0 0;
+// 					}
+// 				}
+// 			}
+//
+// 			.socialWrap {
+// 				order: 2;
+// 				display: flex;
+// 				align-items: flex-end;
+//
+// 				> a {
+// 					margin: 0 30px 2px 0;
+// 				}
+//
+// 				.social {
+// 					margin: 0;
+//
+// 					a {
+// 						margin: 0 14px 0 0;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+@media (max-width: 1100px) {
+	footer {
+		font-size: 16px;
+
+		.wrapper {
+			.socialWrap {
+				> a {
+					margin: 0 30px 5px 0;
+					line-height: normal;
+				}
+			}
+		}
+	}
+}
+// @media (max-width: 960px) {
+// 	footer {
+// 		padding: 24px 0 32px;
+//
+// 		.wrapper {
+// 			align-items: flex-start;
+//
+// 			.footer {
+// 				padding: 15px 0 0;
+//
+// 				ul {
+// 					li {
+// 						margin-right: 20px;
+// 					}
+// 				}
+// 			}
+//
+// 			.phones {
+// 				flex-direction: column;
+// 				margin: 0 28px 0 auto;
+//
+// 				.phone {
+// 					&:first-child {
+// 						margin: 0;
+// 					}
+// 				}
+// 			}
+//
+// 			.socialWrap {
+// 				flex-direction: column;
+// 				align-items: flex-start;
+//
+// 				> a {
+// 					margin: 0 0 5px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+// @media (max-width: 720px) {
+// 	footer {
+// 		padding: 24px 0 25px;
+//
+// 		.wrapper {
+// 			.footer {
+// 				display: none;
+// 			}
+// 		}
+// 	}
+// }
+// @media (max-width: 500px) {
+// 	footer {
+// 		padding: 34px 0 25px;
+//
+// 		.wrapper {
+// 			flex-direction: column;
+//
+// 			.copy {
+// 				margin-bottom: 15px;
+//
+// 				span {
+// 					br {
+// 						display: none;
+// 					}
+// 				}
+// 			}
+//
+// 			.footer {
+// 				ul {
+// 					li {}
+// 				}
+// 			}
+//
+// 			.phones {
+// 				margin: 0 0 15px;
+//
+// 				.phone {
+// 					&:first-child {}
+// 				}
+// 			}
+//
+// 			.socialWrap {
+// 				width: 100%;
+// 				flex-direction: row;
+// 				justify-content: space-between;
+//
+// 				> a {}
+//
+// 				.social {
+// 					a {
+// 						margin: 0 6px 0 0;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

@@ -1,0 +1,26 @@
+.seo_achievement_item {
+  text-align: center;
+
+  &__image {
+    display: flex;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__heading {
+    font-family: MullerBold;
+    font-size: 24px;
+    line-height: 32px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .proprtional_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
