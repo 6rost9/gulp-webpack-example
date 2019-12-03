@@ -1,5 +1,4 @@
 # gulp-webpack-example
----
 
 Пример сборки проекта с использованием связки Gulp(styles) + Webpack(scripts)
 
